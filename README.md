@@ -1,4 +1,4 @@
-# NCI-Gadi-tutorial
+# Tutorial for Gadi of NCI
 This is a concise tutorial dedicated for training deep learning models with pytorch and GPU on Gadi HPC of National Computational Infrastructure.
 
 ## Create Gadi account
