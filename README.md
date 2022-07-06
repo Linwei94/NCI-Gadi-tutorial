@@ -65,3 +65,6 @@ Note that $PROJECT and $USER are the two global variable, and the pytorch versio
 2. With a simple `qsub job.sh` command and your experiment can run. You can also try to monitor your job with `qstat`.
 
 For more details, please refer to the [official help doc](https://opus.nci.org.au/display/Help/Gadi+User+Guide). Wish you luck in your research.
+
+## Additional help scripts
+If you want to submit all jobs in a folder, you can easily put the `help.sh` file in the jobs folder and run `bash ./help.sh`
