@@ -3,6 +3,6 @@
 for file in ./*; do
   if [ ${file} != "./help.sh" ]
     then
-      echo ${file}
+      qsub ${file}
   fi
 done
