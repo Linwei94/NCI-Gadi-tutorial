@@ -40,7 +40,7 @@ All the packages will be installed in `~/.local/lib/python3.10/site-packages`, w
 #PBS -l jobfs=200GB
 #PBS -l ngpus=1
 #PBS -q gpuvolta
-#PBS -P $PROJECT
+#PBS -P {YOUR-PROJECT-NAME}
 #PBS -l walltime=10:00:00
 #PBS -l storage=gdata/$PROJECT+scratch/$PROJECT
 #PBS -l wd
@@ -57,10 +57,10 @@ projectDIR="progressive_fixing"
 
 module load python3/3.9.2
 module load pytorch/1.9.0
-cd /scratch/$PROJECT/$USER/$projectDIR
-python3 train.py --dataset=$dataset --model=$modelname --loss=$loss --PF_criterion=$PF_criterion --PF_epoch_1=$PF_epoch_1 --PF_epoch_2=$PF_epoch_2 --PF_epoch_3=$PF_epoch_3 >/scratch/$PROJECT/$USER/progressive_fixing/NCI-HPC/logs/$filename.log
+cd /scratch/{YOUR-PROJECT-NAME}/$USER/$projectDIR
+python3 train.py --dataset=$dataset --model=$modelname --loss=$loss --PF_criterion=$PF_criterion --PF_epoch_1=$PF_epoch_1 --PF_epoch_2=$PF_epoch_2 --PF_epoch_3=$PF_epoch_3 >/scratch/{YOUR-PROJECT-NAME}/$USER/progressive_fixing/NCI-HPC/logs/$filename.log
 ```
-Note that $PROJECT and $USER are the two global variable, and the pytorch version must be `pytorch/1.9.0`. This is out of the pytorch version on Gadi is binded with python version.
+Note that $USER is a global variable, and the pytorch version must be `pytorch/1.9.0`. This is out of the pytorch version on Gadi is binded with python version.
 
 2. With a simple `qsub job.sh` command and your experiment can run. You can also try to monitor your job with `qstat`.
 
