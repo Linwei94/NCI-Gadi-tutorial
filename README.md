@@ -42,7 +42,7 @@ All the packages will be installed in `~/.local/lib/python3.10/site-packages`, w
 #PBS -q gpuvolta
 #PBS -P {YOUR-PROJECT-NAME}
 #PBS -l walltime=10:00:00
-#PBS -l storage=gdata/$PROJECT+scratch/$PROJECT
+#PBS -l storage=gdata/{YOUR-PROJECT-NAME}+scratch/{YOUR-PROJECT-NAME}
 #PBS -l wd
 
 filename="force_47_171_190"
